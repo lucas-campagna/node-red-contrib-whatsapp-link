@@ -18,7 +18,7 @@ module.exports = function(RED) {
         this.on('input', async function(msg, send){
             if (msg.payload === "destroy") {
                 if(node.client.clientType === "waWebClient"){
-                    node.clinet.WAClose();
+                    node.client.WAClose();
                     SetStatus("Disconnected","red");
                 } else {
                     var client = await node.client;
