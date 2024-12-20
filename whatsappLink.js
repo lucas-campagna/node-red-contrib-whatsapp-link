@@ -1,10 +1,8 @@
 module.exports = function(RED) {
     const QRCode = require('qrcode');
     const FS = require('node:fs')
-    const OS = require('os');
     const Path = require('path');
-    let userDir = OS.homedir();
-    let whatsappLinkDir = Path.join(userDir, '.node-red', 'Whatsapp-Link');
+    let whatsappLinkDir = Path.join(RED.settings.userDir, 'Whatsapp-Link');
     let whatsappLinkDirSocket = Path.join(whatsappLinkDir, 'WA-Sockets');
     // let whatsappLinkDirSocketLogs = Path.join(whatsappLinkDir, 'WA-Sockets-logs');
         
